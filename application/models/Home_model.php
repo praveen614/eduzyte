@@ -32,7 +32,7 @@ function get_email_gen_id($table="",$gid=''){
 }
 
 function get_tutor_name($tutor_id=''){
-	return $this->db->where('generated_id',$tutor_id)->get('tutor')->row()->name;	  
+	return $this->db->where('id',$tutor_id)->get('tutor')->row()->name;	  
 	 
 }
 
@@ -43,8 +43,8 @@ function get_generate_id($table="",$id=''){
   return $this->db->last_query();
 }
 
-function get_student_name($student_id=''){
-	return $this->db->where('generated_id',$student_id)->get('student')->row()->name;  
+function get_student_name($student_id=''){ 
+	return $this->db->where('id',$student_id)->get('student')->row()->name;  
 	
 }
 
