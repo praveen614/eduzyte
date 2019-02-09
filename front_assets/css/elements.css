@@ -1,0 +1,61 @@
+@import "slick.css";
+@import "swiper.min.css";
+@import "icofont.css";
+@import "animate.css";
+@import "magnific-popup.css";
+
+/* PRELOADER WAVE STYLE */
+#preloader-wrapper {
+background: #05aeff;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.preloader-wave-effect {
+    height: 112px;
+    left: 50%;
+    margin: -56px -75px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    width: 150px;
+    background: url(../img/logo/eduzyte_final1.gif);
+  
+
+}
+
+// .preloader-wave-effect::before,
+// .preloader-wave-effect::after {
+//     animation: 1.6s linear 0s normal none infinite running preloader-wave;
+//     background: #fff none repeat scroll 0 0;
+//     border-radius: 100%;
+//     content: "";
+//     height: 50px;
+//     position: absolute;
+//     width: 50px;
+// }
+
+// .preloader-wave-effect::after {
+//     animation-delay: -0.8s;
+// }
+
+// @keyframes preloader-wave {
+//     0% {
+//         opacity: 1;
+//         transform: scale(0, 0);
+//     }
+//     100% {
+//         opacity: 0;
+//         transform: scale(1, 1);
+//     }
+// }

@@ -1,0 +1,234 @@
+body{
+    overflow-x: hidden;
+}
+.navbar-toggle{
+    background-color: #05aeff;
+    border-radius: 0px;
+    margin-right: 5px;
+}
+.navbar-toggle .icon-bar{
+    height: 3px!important;
+}
+@media only screen and (max-width:1299px){
+.subscribe-box{
+    max-width: 600px;
+}
+}
+@media only screen and (max-width:1199px){
+#testimonial-area .slider-content::before{
+    left:13px;
+    top:40px;
+}
+.awhcircle{
+    left: 16%;
+}
+.get-in-touch.p-100{
+    padding: 40px;
+}
+.address-box.p-100{
+    padding: 40px;
+}
+}
+@media only screen and (max-width:1169px){
+.cd-timeline-img i {
+    display: block;
+    width: inherit!important;
+    height: inherit!important;
+    line-height: 37px;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+}
+}
+@media only screen and (max-width: 991px){
+#fun-fact-area {
+    padding: 30px 0 20px!important;
+}
+.smpdfaq{
+    margin-left: 25px;
+    margin-top: 30px;
+}
+.smpdfaq .panel{
+    width: 92%
+}
+.links ul{
+    margin-bottom: 20px;
+}
+.contact-box{
+    top:34%;
+}
+.awhcircle{
+    left: 9%;
+}
+
+/*===========new styles====================*/
+
+.login {
+    padding-top: 100px !important;
+    height: auto !important;
+    padding-right: 15px !important;
+}
+
+.bg-img{
+    background-image: none !important;
+}
+
+}
+@media only screen and (max-width: 767px){
+.contact-box-inner{
+    margin-top: -400px;
+}
+.address-info li.phone-number{
+    width: 50%;
+    float: left;
+}
+#footer-area .social, #subfooterarea .social{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.get-in-touch .form-control{
+    margin-bottom: 15px;
+}
+.links {
+    margin-top: 20px;
+    padding:30px;
+}
+.links ul li{
+    width: 50%;
+    float: left;
+}
+.smpdfaq .panel{
+    width: 95%
+}
+.smpdfaq{
+    margin-left:10px;
+    margin-top: 30px;
+}
+#accordion.panel-group .panel:nth-child(4){
+    margin-bottom: 20px;
+}
+.navbar-header{
+    width: 100%;
+    height: 130px;
+    margin: 0px auto;
+    display: block;
+    float: none;
+    text-align: center; 
+    float: none;
+}
+.navbar-brand{
+    float: none;
+}
+#navigation{
+    display: block!important;
+}
+.welcometxt{
+    margin-top: 3px!important;
+    text-align: center !important;
+}
+.sidenav {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 99999999; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(top, #57b755 0%, #05aeff 100%) repeat scroll 0 0;
+    background: linear-gradient(to bottom, #57b755 0%, #05aeff 100%) repeat scroll 0 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 10px !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    color: #fff !important;
+    display: block !important;
+    transition: 0.3s !important;
+  cursor:pointer !important;
+  border-bottom: 1px dotted #fff !important;
+  text-transform: capitalize !important;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #ffc000 !important;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute !important;
+    top: 0 !important;
+    right: 15px !important;
+    font-size: 36px !important;
+    margin-left: 20px !important;
+    border-bottom: none !important;
+}
+#mySidenav ul{
+  margin: 0px !important;
+  list-style: none !important;
+  margin-left:0px !important;
+  padding-left:10px !important;
+  padding-right:10px !important;
+}
+#mySidenav ul li{
+  list-style: none !important;
+}
+.subscribe-box #typeit{
+    font-size: 10px;
+    white-space: nowrap;
+}
+#typeit span{
+    display: none;
+}
+a.navbar-brand img{
+    margin-left: 100px!important;
+}
+#app-about-area.ptb-60{
+    padding:30px 0px!important;
+}
+.about-app{
+    margin-top: 5px!important;
+}
+}
+@media only screen and (max-width: 480px){
+.single-fact h5{
+    font-size: 14px;
+}
+.links ul li{
+    width: 100%;
+    float: none;
+}
+.appicons{
+    width: 100%;
+    display: block;
+    padding:5px 0px;
+}
+.address-info li.phone-number{
+    width: inherit;
+    float: none;
+}
+}

@@ -1,0 +1,181 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Home extends CI_Controller {
+
+	
+	public function index()
+	{
+		//echo "hi";die;
+        $page_data['page_name']  = 'home';
+        $page_data['page_title'] = 'Home';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+public function register($id)
+	{
+
+          $page_data['id']=$id;
+		
+        $page_data['page_name']  = 'register';
+        $page_data['page_title'] = 'Register';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+	public function package()
+	{
+		//echo "hi";die;
+        $page_data['page_name']  = 'packages';
+        $page_data['page_title'] = 'package';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+	public function login()
+	{
+		//echo "hi";die;
+        $page_data['page_name']  = 'login';
+        $page_data['page_title'] = 'Login';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+  public function video()
+  {
+    //echo "hi";die;
+        $page_data['page_name']  = 'video';
+        $page_data['page_title'] = 'Video Gallary';
+        $this->load->view('frontend/index', $page_data);
+    
+  }
+
+   public function photo()
+  {
+    //echo "hi";die;
+        $page_data['page_name']  = 'photo';
+        $page_data['page_title'] = 'Image Gallary';
+        $this->load->view('frontend/index', $page_data);
+    
+  }
+
+
+	public function contact()
+	{
+		//echo "hi";die;
+        $page_data['page_name']  = 'contact';
+        $page_data['page_title'] = 'Contact Us';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+	public function about()
+	{
+		//echo "hi";die;
+        $page_data['page_name']  = 'about';
+        $page_data['page_title'] = 'About Us';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+	public function tree()
+	{
+		//echo "hi";die;
+        $page_data['page_name']  = 'tree';
+        $page_data['page_title'] = 'Tree View';
+        $this->load->view('frontend/index', $page_data);
+		
+	}
+
+	  public function reg($id)
+       {
+
+       	
+            //echo $m_id;die;
+
+            
+             
+                $this->load->helper(array('form', 'url'));
+                 $this->load->library('session');
+
+                  $this->load->library('form_validation');
+                    $this->form_validation->set_rules('refname', 'Refname', 'required');
+        
+                   $this->form_validation->set_rules('position', 'Position', 'required');
+                    $this->form_validation->set_rules('pan', 'pan', 'required');
+        
+                   $this->form_validation->set_rules('fname', 'first name', 'required');
+                    $this->form_validation->set_rules('lname', 'Last name', 'required');
+        
+                   $this->form_validation->set_rules('email', 'Email', 'required');
+                    $this->form_validation->set_rules('mobile', 'Mobile', 'required');
+        
+                   $this->form_validation->set_rules('password', 'Password', 'required');
+                     $this->form_validation->set_rules('confirm_password', 'confirm_password', 'required');
+                   $this->form_validation->set_error_delimiters('<span class="error" style="color:red" >', '</span>');
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                    $page_data['id']  = $id;
+        $page_data['page_name']  = 'register';
+        $page_data['page_title'] = 'Register';
+        $this->load->view('frontend/index', $page_data);
+		}
+              else
+              {
+       	//print_r($_POST);die;
+       	if($this->db->where('member_id',$this->input->post('refname'))->get('member')->num_rows() == 1){
+       	$members	=	$this->db->get('member'); 
+        $count=$members->num_rows();
+        //echo $count;die;
+       	if($count >0){
+       		$ref=$this->db->where('member_id',$this->input->post('refname'))->get('member')->row()->id;
+       		  $member_id=$this->db->order_by('id','DESC')->get('member')->row()->member_id;	
+       		  $member_id=$this->db->where('id',$this->input->post('package'))->get('package')->row()->code.(substr($member_id,1)+1);
+       		}
+
+       		  else{	
+       		  	$ref='0';
+       		  	$member_id="V1000";}
+       		  //echo $member_id;die;
+       		  if($member_id == 'V1000' || $member_id == 'K1000'){$m_id='0';}else{$m_id=$member_id;}
+
+
+
+              $data=array(
+
+                 'reffer_id'=>$ref,
+                 'position'=>$this->input->post('position'),
+                   'pan'=>$this->input->post('pan'),
+                 'package'=>$this->input->post('package'),
+                 'fname'=>$this->input->post('firstname'),
+                 'lname'=>$this->input->post('lastname'),
+                 
+                 'email'=>$this->input->post('email'),
+                 'mobile'=>$this->input->post('mobile'),
+                
+                 // ''=>$this->input->post('username'),
+                 'password'=>md5($this->input->post('password')),
+                  'join_date'=>$this->input->post('join_date'),
+            		'status'=>2
+            		
+
+              );
+              //print_r($data);die;
+              $this->session->set_userdata('member_data',$data);
+              /*$d=$this->session->userdata('member_data');
+              echo $d['member_id'];
+              die;*/
+              redirect('Member/payment');
+          
+         
+       } else{
+            $this->session->set_flashdata('msg','Reffer Id Not Available');
+        redirect('Member/register');
+          }
+
+   }
+ }
+
+}

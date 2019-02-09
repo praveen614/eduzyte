@@ -1,0 +1,16 @@
+Tutor Profile Links
+http://demoworks.in/html/eduzyte2/profile_email_step.php
+http://demoworks.in/html/eduzyte2/profile_email_message_content.php
+http://demoworks.in/html/eduzyte2/profile_personal_inormation_step.php
+http://demoworks.in/html/eduzyte2/profile_subject_step.php
+http://demoworks.in/html/eduzyte2/profile_add_more_qualifications_step.php
+http://demoworks.in/html/eduzyte2/profile_teaching_exp_step.php
+http://demoworks.in/html/eduzyte2/profile_teaching_details_step.php
+http://demoworks.in/html/eduzyte2/profile_teaching_time_slot_details_step.php
+http://demoworks.in/html/eduzyte2/profile_studnet_testimonials.php
+http://demoworks.in/html/eduzyte2/profile_tutor_final_step.php
+
+Student Profile Links
+http://demoworks.in/html/eduzyte2/profile_student_personal_inormation_step.php
+http://demoworks.in/html/eduzyte2/profile_student_subject_step.php
+http://demoworks.in/html/eduzyte2/profile_student_final_step.php
